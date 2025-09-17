@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony Stark - Portfolio & CV | Frontend Developer</title>
+    <meta name="description" content="Tony Stark's Portfolio and Creative CV - Frontend Developer specializing in modern web technologies">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <nav class="nav-container">
+            <div class="logo">
+                <span class="logo-text">TONY STARK</span>
+                <span class="logo-subtitle">Frontend Developer</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Home
+                </a></li>
+                <li><a href="#about" class="nav-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    About
+                </a></li>
+                <li><a href="#portfolio" class="nav-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Portfolio
+                </a></li>
+                <li><a href="#skills" class="nav-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="12,2 15.09,8.26 22,9 17,14 18.18,21 12,17.77 5.82,21 7,14 2,9 8.91,8.26" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Skills
+                </a></li>
+                <li><a href="#contact" class="nav-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Contact
+                </a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                    <span class="theme-icon">
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.752-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="hero-greeting">Hello, I'm</span>
+                        <span class="hero-name">Tony Stark</span>
+                        <span class="hero-role">Frontend Developer</span>
+                    </h1>
+                    <p class="hero-description">
+                        Passionate about creating innovative web experiences with cutting-edge technology. 
+                        Specializing in modern JavaScript frameworks and responsive design.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                        <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-avatar">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-inner">TS</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Awards</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/CV Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-text">About Me</span>
+                <span class="title-subtitle">Professional Profile</span>
+            </h2>
+            
+            <div class="about-content">
+                <div class="about-info">
+                    <div class="personal-info">
+                        <h3>Personal Information</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Full Name:</span>
+                                <span class="info-value">Robert John Downey Jr. (Tony Stark)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Born:</span>
+                                <span class="info-value">April 4, 1965</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Location:</span>
+                                <span class="info-value">Manhattan, New York City</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Height:</span>
+                                <span class="info-value">5'8" (1.73 m)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Specialization:</span>
+                                <span class="info-value">Frontend Development & Acting</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="professional-summary">
+                        <h3>Professional Summary</h3>
+                        <p>
+                            Tony Stark has evolved into one of the most respected developers in the tech industry with over four decades in entertainment and technology. Known for his versatile performances ranging from dramatic roles to iconic superhero characters, he has managed to stay fresh and relevant throughout his career. His most notable achievements include portraying Tony Stark/Iron Man in the Marvel Cinematic Universe and his transition into cutting-edge web development.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-experience">
+                    <div class="education">
+                        <h3>Education & Training</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-year">1982</div>
+                                <div class="timeline-content">
+                                    <h4>Santa Monica High School</h4>
+                                    <p>Left in 1982 to pursue acting and development full-time</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">1980</div>
+                                <div class="timeline-content">
+                                    <h4>Stagedoor Manor Performing Arts</h4>
+                                    <p>Comprehensive performing arts education</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">1975</div>
+                                <div class="timeline-content">
+                                    <h4>Perry House School</h4>
+                                    <p>Chelsea, London - Classical ballet training</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="awards">
+                        <h3>Awards & Recognition</h3>
+                        <div class="awards-grid">
+                            <div class="award-item">
+                                <div class="award-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="award-info">
+                                    <h4>3x Golden Globe Winner</h4>
+                                    <p>Best Actor - Motion Picture</p>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <div class="award-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.5 3.5C18.5 3.22386 18.2761 3 18 3H6C5.72386 3 5.5 3.22386 5.5 3.5V4.5C5.5 4.77614 5.72386 5 6 5H7V19.5L12 16.5L17 19.5V5H18C18.2761 5 18.5 4.77614 18.5 4.5V3.5Z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="award-info">
+                                    <h4>BAFTA Best Actor Winner</h4>
+                                    <p>Chaplin (1992)</p>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <div class="award-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="award-info">
+                                    <h4>2x Academy Award Nominee</h4>
+                                    <p>Outstanding Performance</p>
+                                </div>
+                            </div>
+                            <div class="award-item">
+                                <div class="award-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                                        <path d="M13 4.069V2h-2v2.069A8.008 8.008 0 004.069 11H2v2h2.069A8.008 8.008 0 0011 19.931V22h2v-2.069A8.008 8.008 0 0019.931 13H22v-2h-2.069A8.008 8.008 0 0013 4.069zM12 18a6 6 0 110-12 6 6 0 010 12z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="award-info">
+                                    <h4>Time Magazine "Time 100"</h4>
+                                    <p>Most Influential People (2008)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-text">Portfolio</span>
+                <span class="title-subtitle">Selected Filmography & Projects</span>
+            </h2>
+
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="blockbuster">Blockbusters</button>
+                <button class="filter-btn" data-filter="early">Early Career</button>
+                <button class="filter-btn" data-filter="recent">Recent Work</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Blockbuster Projects -->
+                <div class="portfolio-item" data-category="blockbuster">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(45deg, #ff6b6b, #ffd93d);">
+                            <span class="project-year">2019</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Avengers: Endgame</h3>
+                        <p>Tony Stark/Iron Man</p>
+                        <div class="portfolio-stats">
+                            <span class="stat">$2.8B Box Office</span>
+                            <span class="stat">Global Phenomenon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="blockbuster">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(45deg, #667eea, #764ba2);">
+                            <span class="project-year">2018</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Avengers: Infinity War</h3>
+                        <p>Tony Stark/Iron Man</p>
+                        <div class="portfolio-stats">
+                            <span class="stat">$2.0B Box Office</span>
+                            <span class="stat">Epic Culmination</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="blockbuster">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(45deg, #f093fb, #f5576c);">
+                            <span class="project-year">2008</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Iron Man</h3>
+                        <p>Tony Stark/Iron Man</p>
+                        <div class="portfolio-stats">
+                            <span class="stat">$585M Box Office</span>
+                            <span class="stat">MCU Launch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Early Career Projects -->
+                <div class="portfolio-item" data-category="early">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(45deg, #4facfe, #00f2fe);">
+                            <span class="project-year">1992</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Chaplin</h3>
+                        <p>Charlie Chaplin</p>
+                        <div class="portfolio-stats">
+                            <span class="stat">Oscar Nomination</span>
+                            <span class="stat">BAFTA Winner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="blockbuster">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(45deg, #43e97b, #38f9d7);">
+                            <span class="project-year">2009</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Sherlock Holmes</h3>
+                        <p>Sherlock Holmes</p>
+                        <div class="portfolio-stats">
+                            <span class="stat">Golden Globe Winner</span>
+                            <span class="stat">Detective Genius</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Work -->
+                <div class="portfolio-item" data-category="recent">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(45deg, #fa709a, #fee140);">
+                            <span class="project-year">2023</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Oppenheimer</h3>
+                        <p>Lewis Strauss</p>
+                        <div class="portfolio-stats">
+                            <span class="stat">Christopher Nolan Film</span>
+                            <span class="stat">Critical Acclaim</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-text">Skills & Expertise</span>
+                <span class="title-subtitle">Professional Capabilities</span>
+            </h2>
+
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 8l-4 4 4 4M17 8l4 4-4 4M14 4l-4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Acting Trademarks
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Sarcastic Humor</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Improvisation</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 98%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Character Development</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Screen Presence</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 96%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Technical Skills
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React/Frontend</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS/SCSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">UI/UX Design</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Genre Versatility</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Drama</span>
+                        <span class="skill-tag">Comedy</span>
+                        <span class="skill-tag">Action</span>
+                        <span class="skill-tag">Thriller</span>
+                        <span class="skill-tag">Superhero</span>
+                        <span class="skill-tag">Biography</span>
+                        <span class="skill-tag">Mystery</span>
+                        <span class="skill-tag">Adventure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-text">Get In Touch</span>
+                <span class="title-subtitle">Let's Work Together</span>
+            </h2>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>tony.stark@teamdowney.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+1 (555) IRON-MAN</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Team Downey Production Company<br>Hollywood, California</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 7H4a2 2 0 01-2-2V4a2 2 0 012-2h16a2 2 0 012 2v1a2 2 0 01-2 2zM4 9v10a2 2 0 002 2h12a2 2 0 002-2V9M10 11h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Business</h4>
+                            <p>Available for Frontend Development<br>& Creative Projects</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form class="form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Tony Stark</h3>
+                    <p>Frontend Developer & Creative Professional</p>
+                    <p class="quote">"The higher the stakes, the happier I am, the better I will be."</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Professional</h4>
+                        <ul>
+                            <li><a href="#contact">Hire Me</a></li>
+                            <li><a href="#">Download CV</a></li>
+                            <li><a href="#">View Projects</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" fill="currentColor"/>
+                                    <circle cx="4" cy="4" r="2" fill="currentColor"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tony Stark. All rights reserved. | Portfolio designed for PT. Thanos Berbakti</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="function.js"></script>
+</body>
+</html>
