@@ -10,9 +10,18 @@
     <header>
       <nav class="navigation">
         <a href="#" class="nav-logo">
-          <img src="PYN-HUB.svg" alt="PYN HUB Logo" class="logo-image">
+          <img src="public/PYN-HUB.svg" alt="PYN HUB Logo" class="logo-image">
         </a>
-        <ul class="nav-menu">
+        
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="nav-menu">
           <li class="nav-item">
             <a href="#" class="nav-link">Home</a>
           </li>
@@ -23,6 +32,9 @@
             <a href="https://wa.me/081234567890" class="nav-link">Contact</a>
           </li>
         </ul>
+        
+        <!-- Overlay for mobile sidebar -->
+        <div class="nav-overlay" id="nav-overlay"></div>
       </nav>
     </header>
 
@@ -42,7 +54,7 @@
           </div>
           <div class="image">
             <img
-              src="yudi.png"
+              src="public/yudi.png"
             />
           </div>
         </div>
@@ -65,11 +77,11 @@
               <progress value="80" max="100"></progress>
             </div>
             <div class="skill">
-              <label>Website Design</label>
+              <label>Web Development</label>
               <progress value="90" max="100"></progress>
             </div>
             <div class="skill">
-              <label>App Design</label>
+              <label>Cyber Security</label>
               <progress value="65" max="100"></progress>
             </div>
             <div class="skill">
@@ -91,12 +103,12 @@
             <p>Mendesain tampilan UI suatu web atau aplikasi serta melakukan UX research.</p>
           </div>
           <div class="box">
-            <h4>Website Design</h4>
+            <h4>Web Development</h4>
             <p>Perencanaan dan pembuatan tampilan visual, struktur, serta pengalaman pengguna situs web.</p>
           </div>
           <div class="box">
-            <h4>App Design</h4>
-            <p>Fokus pada UI visual seperti warna, tipografi, ikon serta UX yang mendukung.</p>
+            <h4>Cyber Security</h4>
+            <p>Fokus pada Keamanan Jaringan, Website, dan Aplikasi.</p>
           </div>
           <div class="box">
             <h4>Graphic Design</h4>
@@ -147,5 +159,61 @@
         </div>
       </section>
     </main>
+    
+    <script>
+      // Mobile Navigation Script
+      const hamburgerMenu = document.getElementById('hamburger-menu');
+      const navMenu = document.getElementById('nav-menu');
+      const navOverlay = document.getElementById('nav-overlay');
+      
+      function toggleMobileNav() {
+        // Only work on mobile devices
+        if (window.innerWidth <= 768) {
+          hamburgerMenu.classList.toggle('active');
+          navMenu.classList.toggle('active');
+          navOverlay.classList.toggle('active');
+          document.body.classList.toggle('nav-open');
+        }
+      }
+      
+      function closeMobileNav() {
+        hamburgerMenu.classList.remove('active');
+        navMenu.classList.remove('active');
+        navOverlay.classList.remove('active');
+        document.body.classList.remove('nav-open');
+      }
+      
+      // Toggle navigation when hamburger is clicked
+      hamburgerMenu.addEventListener('click', toggleMobileNav);
+      
+      // Close navigation when overlay is clicked
+      navOverlay.addEventListener('click', closeMobileNav);
+      
+      // Close navigation when nav link is clicked (for mobile only)
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768) {
+            closeMobileNav();
+          }
+        });
+      });
+      
+      // Close navigation when window is resized to desktop and ensure desktop navigation works
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+          closeMobileNav();
+          // Reset any mobile-specific classes
+          document.body.classList.remove('nav-open');
+        }
+      });
+      
+      // Initialize on page load
+      window.addEventListener('load', () => {
+        if (window.innerWidth > 768) {
+          closeMobileNav();
+        }
+      });
+    </script>
   </body>
 </html>
