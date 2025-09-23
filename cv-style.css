@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --white-color: #fff;
+  --primary-color: #ff9000;
+  --secondary-color: #000000;
+  --black-color: #000000;
+  --grey-color: #1a1a1a;
+  --dark-color: #000;
+  --text-color: #fff;
+  --light-text: #e0e0e0;
+  --accent-color: #ff9000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Back Button */
+.back-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--primary-color);
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 4px 12px rgba(253, 111, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #e55a00;
+  transform: translateY(-2px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(253, 111, 0, 0.4);
+  color: white;
+}
+
+.back-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.back-button span {
+  display: none;
+}
+
+/* CV Container - Layout untuk CV */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar untuk CV */
+.sidebar {
+  background: var(--primary-color);
+  color: var(--black-color);
+  width: 280px;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 20px;
+  margin: 20px;
+  border: 3px solid var(--black-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: var(--black-color);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border: 4px solid var(--black-color);
+  align-self: center;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-pic img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+}
+
+.sidebar h2 {
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+  text-align: center;
+  align-self: center;
+  color: var(--black-color);
+}
+
+.sidebar .role {
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: var(--black-color);
+  text-align: center;
+  align-self: center;
+  opacity: 0.8;
+}
+
+.personal-info {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.personal-info li {
+  margin: 0.8rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--black-color);
+}
+
+.personal-info strong {
+  color: var(--black-color);
+  font-weight: 600;
+}
+
+/* Skills Section dalam Sidebar */
+.skills {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.skills h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  border-bottom: 2px solid var(--black-color);
+  padding-bottom: 0.5rem;
+  color: var(--black-color);
+}
+
+.skill-item {
+  margin-bottom: 1.2rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.skill-header span:first-child {
+  font-size: 0.85rem;
+  color: var(--black-color);
+  font-weight: 500;
+}
+
+.skill-level {
+  font-size: 0.75rem;
+  color: var(--black-color);
+  opacity: 0.8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.skills p {
+  margin: 0.8rem 0 0.3rem;
+  font-size: 0.85rem;
+  color: var(--black-color);
+  opacity: 0.8;
+}
+
+.progress {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: var(--black-color);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Tool Items */
+.tool-item {
+  margin-bottom: 1.2rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.tool-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.tool-header svg {
+  color: var(--black-color);
+  flex-shrink: 0;
+}
+
+.tool-header img {
+  flex-shrink: 0;
+  border-radius: 3px;
+}
+
+.tool-header span {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--black-color);
+}
+
+.tool-item p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--black-color);
+  line-height: 1.4;
+  padding-left: 1.5rem;
+  opacity: 0.8;
+}
+
+.tool-logos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tool-logos img {
+  border-radius: 4px;
+  opacity: 0.95;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.1);
+  padding: 2px;
+}
+
+.tool-logos img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.tool-text {
+  font-size: 0.8rem;
+  color: #f1f2f6;
+  background: rgba(255,255,255,0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: var(--black-color);
+  font-size: 1.2rem;
+  transition: 0.3s;
+  padding: 0.5rem;
+}
+
+.social-icons a:hover {
+  color: var(--white-color);
+  transform: scale(1.1);
+}
+
+/* Main Content Area untuk CV */
+.content {
+  flex: 1;
+  padding: 2rem;
+  background: var(--secondary-color);
+}
+
+.hero {
+  background: var(--primary-color);
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 20px;
+  border: 3px solid var(--black-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin: 0;
+  color: var(--black-color);
+}
+
+.hero h1 span {
+  color: var(--black-color);
+}
+
+.hero p {
+  margin-top: 1rem;
+  color: var(--black-color);
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  color: var(--white-color);
+  border-left: 5px solid var(--primary-color);
+  padding-left: 15px;
+}
+
+.card {
+  background: var(--black-color);
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 10px 30px rgba(255, 144, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(255, 144, 0, 0.3);
+}
+
+.card h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 0.5rem 0 0 0;
+  color: var(--white-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Responsive untuk CV */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+    padding: 1.5rem 1rem;
+    align-items: flex-start;
+  }
+  
+  .profile-pic {
+    margin-bottom: 0.5rem;
+    width: 100px;
+    height: 100px;
+    align-self: center;
+  }
+  
+  .profile-pic img {
+    width: 130px;
+    height: 130px;
+    top: -20px;
+  }
+  
+  .skills {
+    margin-bottom: 1rem;
+  }
+  
+  .tool-item {
+    margin-bottom: 0.8rem;
+    padding: 0.5rem 0;
+  }
+  
+  .tool-header span {
+    font-size: 0.85rem;
+  }
+  
+  .tool-item p {
+    font-size: 0.75rem;
+    padding-left: 1.2rem;
+  }
+  
+  .content {
+    padding: 1rem;
+  }
+  
+  .back-button {
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+  }
+  
+  .back-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .personal-info {
+    margin-bottom: 1rem;
+  }
+  
+  .skills {
+    margin-bottom: 1rem;
+  }
+  
+  .tool-item {
+    margin-bottom: 0.6rem;
+    padding: 0.4rem 0;
+  }
+  
+  .tool-header {
+    gap: 0.4rem;
+  }
+  
+  .tool-header span {
+    font-size: 0.8rem;
+  }
+  
+  .tool-item p {
+    font-size: 0.7rem;
+    padding-left: 1rem;
+  }
+  
+  .back-button {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+  
+  .back-button svg {
+    width: 16px;
+    height: 16px;
+  }
+}

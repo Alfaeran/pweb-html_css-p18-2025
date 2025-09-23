@@ -2,15 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Creative CV</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cv-style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- Back Button -->
+  <a href="index.html" class="back-button" aria-label="Back to Home">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 6L6 18"/>
+      <path d="M6 6l12 12"/>
+    </svg>
+    <span>Back to Home</span>
+  </a>
+  
   <div class="container">
     <!-- Sidebar -->
     <aside class="sidebar">
@@ -28,26 +36,81 @@
       <!-- Skills -->
       <div class="skills">
         <h3>Skills</h3>
-        <p>UI/UX</p>
-        <div class="progress"><span style="width: 90%;"></span></div>
-        <p>Web Development</p>
-        <div class="progress"><span style="width: 85%;"></span></div>
-        <p>Cyber Security</p>
-        <div class="progress"><span style="width: 75%;"></span></div>
-        <p>Graphic Design</p>
-        <div class="progress"><span style="width: 80%;"></span></div>
+        <div class="skill-item">
+          <div class="skill-header">
+            <span>UI/UX</span>
+            <span class="skill-level">Expert</span>
+          </div>
+          <div class="progress"><span style="width: 90%;"></span></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header">
+            <span>Web Development</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+          <div class="progress"><span style="width: 85%;"></span></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header">
+            <span>Cyber Security</span>
+            <span class="skill-level">Intermediate</span>
+          </div>
+          <div class="progress"><span style="width: 75%;"></span></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header">
+            <span>Graphic Design</span>
+            <span class="skill-level">Advanced</span>
+          </div>
+          <div class="progress"><span style="width: 80%;"></span></div>
+        </div>
       </div>
 
       <div class="skills">
-        <h3>Language</h3>
-        <p>UI/UX</p>
-        <div class="progress"><span style="width: 90%;"></span></div>
-        <p>Web Development</p>
-        <div class="progress"><span style="width: 85%;"></span></div>
-        <p>Cyber Security</p>
-        <div class="progress"><span style="width: 75%;"></span></div>
-        <p>Graphic Design</p>
-        <div class="progress"><span style="width: 80%;"></span></div>
+        <h3>Tools</h3>
+        
+        <div class="tool-item">
+          <div class="tool-header">
+            <img src="https://cdn-icons-png.flaticon.com/512/1260/1260111.png" alt="UI/UX" width="18" height="18">
+            <span>UI/UX</span>
+          </div>
+          <div class="tool-logos">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" width="24" height="24">
+          </div>
+        </div>
+        
+        <div class="tool-item">
+          <div class="tool-header">
+            <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="Web Development" width="20" height="20">
+            <span>Web Development</span>
+          </div>
+          <div class="tool-logos">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" width="24" height="24">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="24" height="24">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" width="24" height="24">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" width="24" height="24">
+          </div>
+        </div>
+        
+        <div class="tool-item">
+          <div class="tool-header">
+            <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Cybersecurity" width="20" height="20">
+            <span>Cybersecurity</span>
+          </div>
+          <div class="tool-logos">
+            <img src="https://www.kali.org/images/kali-dragon-icon.svg" alt="Kali Linux" width="24" height="24">
+          </div>
+        </div>
+        
+        <div class="tool-item">
+          <div class="tool-header">
+            <img src="https://cdn-icons-png.flaticon.com/512/3159/3159310.png" alt="Graphic Design" width="20" height="20">
+            <span>Graphic Design</span>
+          </div>
+          <div class="tool-logos">
+            <img src="https://logos-world.net/wp-content/uploads/2020/02/Canva-Logo.png" alt="Canva" width="24" height="24">
+          </div>
+        </div>
       </div>
 
       <!-- Social Icons -->
