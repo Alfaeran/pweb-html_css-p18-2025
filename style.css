@@ -445,6 +445,73 @@ main {
   color: var(--white-color);
 }
 
+/* Skill header with category labels */
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.skill-header label {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--white-color);
+}
+
+.skill-level {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+/* Category colors - all using orange theme for consistency */
+.skill-level.perfect {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.skill-level.expert {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.skill-level.advanced {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.skill-level.proficient {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.skill-level.intermediate {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.skill-level.developing {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
 progress {
   width: 100%;
   height: 12px;
